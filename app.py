@@ -87,7 +87,23 @@ app.layout = html.Div(
             ],
             className="menu",
         ),
-        
+        html.Div(
+            children=[
+                html.Div(
+                    children=dcc.Graph(
+                        id="price-chart", config={"displayModeBar": False},
+                    ),
+                    className="card",
+                ),
+                html.Div(
+                    children=dcc.Graph(
+                        id="volume-chart", config={"displayModeBar": False},
+                    ),
+                    className="card",
+                ),
+            ],
+            className="wrapper",
+        ),
     ]
 )
 
